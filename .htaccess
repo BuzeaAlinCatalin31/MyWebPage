@@ -1,0 +1,21 @@
+# linia următoare previne accesul la folderele/fișierele din calea dată
+Options -Indexes
+
+# IndexIgnore controllers models views
+
+# IndexIgnore *.jpg banne?.png
+
+RewriteEngine On 
+RewriteRule ^([\w]+)$ ?page=$1
+
+ErrorDocument 403 /Curs_22/errors/error403.html
+ErrorDocument 404 /Curs_22/errors/error404.html
+
+# AuthUserFile /Applications/XAMPP/xamppfiles/htdocs/Curs_22/.htpasswd
+# AuthType Basic
+# AuthName "Introdu user & pass:"
+# Require valid-user
+
+<filesMatch ".(css|js|html)$">
+Header set Cache-Control "max-age=30, public"
+</filesMatch>

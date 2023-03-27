@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <title>{{title}}</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="myApp/stil.css">
+    <link rel="stylesheet" href="myApp/style.css">
+  </head>
+
+  <!-- BODY -->
+
+  <body style="background-color: lightcyan;">
+    <nav style="background-color:	darkcyan;" class="navbar navbar-expand-lg  sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img style="-webkit-filter: drop-shadow(5px 5px 5px #222);
+                      filter: drop-shadow(5px 5px 5px #222);" 
+               src="myApp/img/animeLogo.png" 
+               alt="missing logo!" 
+               width="50" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a style="color:white" class="nav-link" aria-current="page" href="home">
+                <img style="height:25px; margin-right:5px;" 
+                     src="myApp/img/home.png" 
+                     alt="Icon not found">Home</a>
+            <a style="color:white" class="nav-link" href="about">
+                <img style="height:25px; margin-right:5px;" 
+                     src="myApp/img/about.png" 
+                     alt="Icon not found">About</a>
+            <a style="color:white" class="nav-link" href="animenews">
+                <img style="height:30px; margin-right:5px;" 
+                     src="myApp/img/news.png" 
+                     alt="Icon not found">Anime news</a>
+            <a style="color:white" class="nav-link" href="animelist">
+                <img style="height:25px; margin-right:5px;" 
+                     src="myApp/img/list.png" 
+                     alt="Icon not found">My anime list</a>
+          </div>
+
+          <a style="color:white; font-family: cGeorgia, serif; font-size: larger;" 
+             href="logout" 
+             class="ms-auto">Logout</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login form</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="login.php">
+              <div class="mb-3">
+                <label for="exampleInputUserName" class="form-label"
+                  >User name:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputUserName"
+                  name="userName"
+                  aria-describedby="emailHelp"
+                />                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password:</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  name="userPass"
+                />
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+  <!-- MAIN CONTENT -->
+
+  <div>
+    <div class="text-center">
+      <h1 class="display-2 text-dark">Okyaku-san, Irasshaimase!</h1>
+      <hr>
+    </div>
+
+    <div class="container">
+      <div class="d-flex row mt-5">
+        <div>
+          {{mainContent}} 
+        </div>
+        <div>
+          {{button}}   
+        </div>
+  
+
+      </div>
+    </div>
+
+    <div>
+
+    </div>
+
+  </div>
+
+  <hr>
+
+  <!-- CONTACT INFO -->
+
+  <div class="container mt-3 mb-2 w-50">
+    <h5 class="mb-3 text-center">You can contact us on the following platforms:</h5>
+    <div class="row">
+        <div class="col">
+            <a class="ms-3" target="_blank" href="https://facebook.com">
+                <img style="width:30px;" src="myApp/img/facebook.png" alt="Image not found">
+                <h5 style="font-size: medium; color: black;">Facebook</h5></a>   
+        </div>
+        <div class="col">
+            <a class="ms-4" target="_blank" href="https://www.instagram.com">
+                <img style="width:30px;" src="myApp/img/instagram.png" alt="Image not found">
+                <h5 style="font-size: medium; color: black;">Instagram</h5></a>
+        </div>
+        <div class="col">
+            <a class="ms-3" target="_blank" href="https://www.youtube.com">
+                <img style="width:30px;" src="myApp/img/youtube.png" alt="Image not found">
+                <h5 style="font-size: medium; color: black;">Youtube</h5></a>
+        </div>
+        <div class="col">
+            <a class="ms-2" target="_blank" href="https://twitter.com">
+                <img style="width:30px;" src="myApp/img/twitter.png" alt="Image not found">
+                <h5 style="font-size: medium; color: black;">Twitter</h5></a> 
+        </div>
+        <div class="col">
+            <a class="ms-2" target="_blank" href="https://www.reddit.com">
+                <img style="width:30px;" src="myApp/img/reddit.png" alt="Image not found">
+                <h5 style="font-size: medium; color: black;">Reddit</h5></a>  
+        </div>
+        <div class="col">
+            <a class="ms-2" target="_blank" href="https://www.tiktok.com/en/">
+                <img style="width:30px;" src="myApp/img/tiktok.png" alt="Image not found">
+                <h5 style="font-size: medium; color: black;">Tiktok</h5></a>    
+        </div>
+        <div class="col">
+            <a class="ms-2" target="_blank" href="https://www.twitch.tv">
+                <img style="width:30px;" src="myApp/img/twitch.png" alt="Image not found">
+                <h5 style="font-size: medium; color: black;">Twitch</h5></a>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+    <footer class="mt-3">
+        <div style="background-color: #383838;" class="container-fluid text-white d-flex justify-content-around pt-3">
+            <p style="text-indent: 30px;" class="col-3"><i>“Life and death are like light and shadow. They’re both always there. But people don’t like thinking about death, so subconsciously, they always look away from it.”</i> <br><br> <b>Yato (Noragami)</b></p>
+            <p style="text-indent: 30px;" class="col-3"><i>“If you begin to regret, you’ll dull your future decisions and let others make your choices for you. All that’s left for you then is to die. Nobody can foretell the outcome. Each decision you make holds meaning only by affecting your next decision.” <br><br> <b>Erwin Smith (Attack on Titan)</b></i> </p>
+            <p style="text-indent: 30px;" class="col-3"><i>“A lesson without pain is meaningless. That’s because no one can gain without sacrificing something. But by enduring that pain and overcoming it, he shall obtain a powerful, unmatched heart.”</i> <br><br> <b>Edward Elric (Fullmetal Alchemist: Brotherhood)</b></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

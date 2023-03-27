@@ -1,0 +1,12 @@
+/* #animeAPI{
+    height: 20em;
+    overflow: auto;
+} */
+
+#tableID{
+    box-shadow: 4px 4px lightblue;
+}
+
+#newsBox{
+    box-shadow: 4px 4px lightgray;
+}

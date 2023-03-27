@@ -1,0 +1,59 @@
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+
+<script async defer src="myApp/tierScript.js"></script>
+<link rel="stylesheet" href="myApp/style.css">
+<script async defer src="myApp/animeNameScript.js"></script>
+
+<button
+  type="button"
+  class="btn btn-secondary mb-4"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModalAddAnime"
+  id="addAnimeButton"
+  style="width: 110px; height:40px;"
+>
+  Add anime
+</button>
+
+<div
+  class="modal fade"
+  id="exampleModalAddAnime"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add your anime here:</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="addAnime" method="POST" action="addanime">
+          <div class="mb-3">
+            <label for="anime" class="form-label">Anime:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="anime"
+              name="anime"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="tier" class="form-label">Tier:</label>
+            <input type="text" class="form-control" id="tier" name="tier" />
+          </div>
+
+          <button type="submit" class="btn btn-secondary">Add anime</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

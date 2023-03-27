@@ -1,0 +1,11 @@
+.btn {
+    border-radius: 30px;
+}
+
+/* #loginButton {
+    border-radius: 30px;
+} */
+
+a:hover{
+    cursor: pointer;
+}
